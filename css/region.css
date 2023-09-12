@@ -1,0 +1,77 @@
+html {
+    background-color: #f5f5f5;
+}
+.content {
+}
+#wrapper {
+    padding: 3em 0;
+}
+#map,
+#region-overview,
+#table1,
+#chart1,
+#intelligence-list,
+#nav-warnings-list,
+#recents-list {
+    display: none; /* to prevent FOUC */
+}
+#region-overview .horizontal-list-item > div:first-child {
+    display: none;
+}
+#region-overview .list-content {
+    padding: 0;
+}
+#region-overview .list-content > div {
+    border-right: 1px solid var(--gray-light);
+    padding: 0 1rem 0 0;
+    max-width: 14rem;
+}
+#region-overview .list-content > div:last-child {
+    border: none;
+    padding: 0;
+}
+#region-overview .list-content div.vertical {
+    width: fit-content;
+}
+div[id^="column2"] .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+#recents-list .horizontal-list-item div.css-wcoprx, 
+#nav-warnings-list .horizontal-list-item div.css-wcoprx, 
+#intelligence-list .horizontal-list-item div.css-wcoprx {
+    display: none;
+}
+#recents-list .actions-button-wrapper button, 
+#nav-warnings-list .actions-button-wrapper button, 
+#intelligence-list .actions-button-wrapper button {
+    padding: 0;
+}
+#recents-list .horizontal-list-item, 
+#nav-warnings-list .horizontal-list-item, 
+#intelligence-list .horizontal-list-item {
+    padding: 1rem;
+}
+#recents-list .horizontal-list-item > div > div:nth-child(2) *, 
+#nav-warnings-list .horizontal-list-item > div > div:nth-child(2) *, 
+#intelligence-list .horizontal-list-item > div > div:nth-child(2) * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#recents-list .horizontal-list-item .static-image, 
+#nav-warnings-list .horizontal-list-item .static-image {
+    background-size: 24px !important;
+    filter: brightness(0) saturate(100%) invert(43%) sepia(97%) saturate(0%) hue-rotate(241deg) brightness(102%) contrast(83%);
+}
+#recents-list div[data-field-type="staticImage"] .list-field-element > div,
+#nav-warnings-list div[data-field-type="staticImage"] .list-field-element > div {
+  /*border: 1px solid #D9D9D9;
+  border-radius: 0.5rem;*/
+}
+/* Table */
+.ag-row {
+    border-bottom: 1px solid var(--gray-light) !important;
+}
+.ag-row-hover {
+    
+}
