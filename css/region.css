@@ -1,5 +1,18 @@
+/*
+  Stylesheet Name: Region
+  Author: Ryan Clontz
+  Version: 3.0
+  Description: This stylesheet contains the styles for the Maritime > Region pages in Softr.
+  Created: September 14, 2023
+  Last Updated: September 14, 2023
+
+  Notes:
+  - The colors are based on the company's branding guidelines.
+  - Responsive styles are included for various screen sizes.
+*/
+
 html {
-    background-color: #f5f5f5;
+    background-color: var(--main-bg-color);
 }
 .content {
 }
@@ -63,15 +76,12 @@ div[id^="column2"] .container {
     background-size: 24px !important;
     filter: brightness(0) saturate(100%) invert(43%) sepia(97%) saturate(0%) hue-rotate(241deg) brightness(102%) contrast(83%);
 }
-#recents-list div[data-field-type="staticImage"] .list-field-element > div,
+/*#recents-list div[data-field-type="staticImage"] .list-field-element > div,
 #nav-warnings-list div[data-field-type="staticImage"] .list-field-element > div {
-  /*border: 1px solid #D9D9D9;
-  border-radius: 0.5rem;*/
-}
+  border: 1px solid #D9D9D9;
+  border-radius: 0.5rem;
+}*/
 /* Table */
 .ag-row {
     border-bottom: 1px solid var(--gray-light) !important;
-}
-.ag-row-hover {
-    
 }

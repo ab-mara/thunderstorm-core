@@ -1,0 +1,67 @@
+/*
+  Stylesheet Name: Alert Management
+  Author: Ryan Clontz
+  Version: 2.0
+  Description: This stylesheet contains the styles for the Alert Management page in Softr.
+  Created: September 14, 2023
+  Last Updated: September 14, 2023
+
+  Notes:
+  - The colors are based on the company's branding guidelines.
+  - Responsive styles are included for various screen sizes.
+  - The font used is "Font Awesome 5 Free" from Font Awesome for icons.
+*/
+
+body {
+    background-color: var(--main-bg-color);
+}
+#table1 .ag-body-viewport .actions-button-wrapper > button {
+    font-size: 0;
+    min-width: 0;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+}
+#table1 .ag-body-viewport .actions-button-wrapper > button:first-of-type:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f2ed";
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+.css-aqxt9w {
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.css-aqxt9w:hover {
+    background-color: rgb(108, 117, 125) !important;
+    color: white !important;
+}
+#table2 .ag-header-cell:first-child > .ag-header-cell-comp-wrapper {
+    text-align: center;
+}
+#table2 .ag-header-cell:first-child > .ag-header-cell-comp-wrapper:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0e7";
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 900;
+}
+#table2 .ag-header-cell:first-child > .ag-header-cell-comp-wrapper > div {
+    display: none;
+}
+.ag-row {
+    border-bottom: 1px solid var(--gray-light) !important;
+}
+.ag-cell .sw-pre-text-container > div {
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

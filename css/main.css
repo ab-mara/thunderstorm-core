@@ -1,3 +1,17 @@
+/*
+  Stylesheet Name: Main
+  Author: Ryan Clontz
+  Version: 3.0
+  Description: This stylesheet contains the sitewide styles for all pages in Softr.
+  Created: September 14, 2023
+  Last Updated: September 14, 2023
+
+  Notes:
+  - The colors are based on the company's branding guidelines.
+  - Responsive styles are included for various screen sizes.
+  - The mono font used is "monospace."
+*/
+
 :root {
     --gray-light: rgb(194, 194, 194); /* #c2c2c2 */
     --gray-lighter: rgb(233, 233, 233); /* #e9e9e9 */
@@ -8,15 +22,6 @@
   }
   .sw-font-family-mono {
       font-family: monospace;
-  }
-   body {
-       /*background-color: var(--main-bg-color);*/
-  }
-   p {
-       //max-width: 60ch;
-  }
-   h1, h2, h3, h4, h5, h6 {
-       //max-width: 40ch;
   }
    a {
        color: var(--primary);
