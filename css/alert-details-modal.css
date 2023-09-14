@@ -1,0 +1,27 @@
+/*
+  Stylesheet Name: Alert Details Modal
+  Author: Ryan Clontz
+  Version: 2.0
+  Description: This stylesheet contains the styles for the Alert Details modal pages in Softr.
+  Created: September 14, 2023
+  Last Updated: September 14, 2023
+
+  Notes:
+  - The colors are based on the company's branding guidelines.
+  - Responsive styles are included for various screen sizes.
+*/
+
+body {
+    padding: 0 4rem;
+}
+#related-list .horizontal-list-item > div:first-child p {
+    margin: initial;
+}
+div[id^="column1"] .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+#related-list .horizontal-list-item .static-image {
+    background-size: 24px !important;
+    filter: brightness(0) saturate(100%) invert(43%) sepia(97%) saturate(0%) hue-rotate(241deg) brightness(102%) contrast(83%);
+}
