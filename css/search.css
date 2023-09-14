@@ -1,0 +1,19 @@
+/*
+  Stylesheet Name: Search
+  Author: Ryan Clontz
+  Version: 2.0
+  Description: This stylesheet contains the styles for the Search modal in Softr.
+  Created: September 14, 2023
+  Last Updated: September 14, 2023
+
+  Notes:
+  - The colors are based on the company's branding guidelines.
+  - Responsive styles are included for various screen sizes.
+*/
+
+.filters-middle-section {
+    visibility: hidden;
+}
+.visible {
+    visibility: visible;
+}
