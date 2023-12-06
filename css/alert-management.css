@@ -65,3 +65,12 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.nav-item {
+    position: relative;
+}
+.nav-link sl-badge {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    translate: 50% -50%;
+}
