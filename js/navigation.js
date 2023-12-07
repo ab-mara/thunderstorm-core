@@ -3,10 +3,10 @@ window.addEventListener("block-loaded-home-header-logged-in-team", () => {
     // Notifications
     //console.log('Header loaded');
     const notifications = document
-      .querySelector("#notification-bell")
+      .getElementById("notification-bell")
       .closest("a");
     notifications.addEventListener("click", function (e) {
-      console.log("Click happened for: " + e.target.id);
+      //console.log("Click happened for: " + e.target.id);
       e.preventDefault();
     });
 
