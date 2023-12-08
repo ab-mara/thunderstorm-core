@@ -11,8 +11,9 @@
   - Responsive styles are included for various screen sizes.
 */
 
-body {
-    padding: 0 4rem;
+.content[data-appid] {
+    width: min(75ch, 100% - 8rem);
+    margin-inline: auto;
 }
 #related-list .horizontal-list-item > div:first-child p {
     margin: initial;
