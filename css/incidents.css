@@ -1,0 +1,26 @@
+/*
+  Stylesheet Name: Incidents
+  Author: Ryan Clontz
+  Version: 1.0
+  Description: This stylesheet contains styles for the Incidents page in Softr. This page 
+  includes a map which is displayed in an iFrame. Any map related styling must be done through
+  the map page's own stylesheet.
+  Created: December 9, 2023
+  Last Updated: December 9, 2023
+
+  Notes:
+  - The colors are based on the company's branding guidelines.
+  - Responsive styles are included for various screen sizes.
+*/
+
+#main {
+    padding: 0 !important;
+}
+#main .col-12 > div {
+    display: flex;
+    height: calc(100vh - var(--topnav-height));
+    flex-direction: column;
+}
+iframe {
+    flex-grow: 1;
+}
