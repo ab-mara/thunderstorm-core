@@ -1,0 +1,158 @@
+/*
+  Stylesheet Name: Overview
+  Author: Ryan Clontz
+  Version: 1.0
+  Description: This stylesheet contains styles for the Overview page in Softr.
+  Created: December 9, 2023
+  Last Updated: December 9, 2023
+
+  Notes:
+  - The colors are based on the company's branding guidelines.
+  - Responsive styles are included for various screen sizes.
+*/
+
+.col-12 {
+    padding-left: 0 !important;
+}
+.grid {
+    display: grid;
+    gap: 1em;
+    padding-left: 15px;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-template-areas:
+    'one  ' 
+    'two  ' 
+    'three' 
+    'four ' 
+    'five ' 
+    'six  ';
+}
+.grid > *:nth-child(1) {
+    grid-area: one;
+}
+.grid > *:nth-child(2) {
+    grid-area: two;
+}
+.grid > *:nth-child(3) {
+    grid-area: three;
+}
+.grid > *:nth-child(4) {
+    grid-area: four;
+}
+.grid > *:nth-child(5) {
+    grid-area: five;
+}
+.grid > *:nth-child(6) {
+    grid-area: six;
+}
+.grid > *:nth-child(7) {
+    grid-area: seven;
+}
+@media screen and (min-width: 30rem) {
+  .grid {
+    grid-template-areas: 
+    'one two'
+    'one three'
+    'one four'
+    'five five five'
+    'six six six'
+  }
+}
+@media screen and (min-width: 50rem) {
+  .grid {
+    grid-template-areas: 
+    'one two five'
+    'one three six'
+    'one four six'
+    'seven seven seven'
+  }
+}
+h2 > :is(svg, span) {
+    vertical-align: baseline;
+    display: inline-block;
+}
+h2 > svg {
+    height: 0.75em;
+}
+h2 > svg path {
+    fill: currentcolor;
+}
+h2 > :not(svg) {
+    margin-left: 0.25rem;
+}
+div[category="Chart"] .breathing-animation {
+    width: 100%;
+}
+.charts-container > div {
+    justify-content: initial;
+    padding-left: 15px;
+}
+.charts-container :is(h2, p) {
+    text-align: initial;
+}
+.charts-container > div > div {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+/* Remove excess padding around bottom container of chart */
+[data-block^="chart"] .container {
+    padding-top: 0 !important;
+    padding-bottom: 1.2rem !important;
+}
+iframe {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+div[id^="list"] :is(.horizontal-list-item) {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+div[id^="list"] .list-container .MuiGrid-item:last-child :is(.horizontal-list-item) {
+    border-bottom: none;
+}
+div#list7 :is(.horizontal-list-item) {
+    display: flex;
+}
+.grid div[category="List"] .css-j0wgia {
+    padding: 6px 10px;
+}
+.grid div[category="List"] .list-content { /* .css-nrr00c */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    gap: 0.5rem;
+}
+.grid .css-isbt42 > .MuiGrid-item {
+    padding-top: .75rem;
+}
+.grid > div:first-child {
+    /*grid-row: span 3;*/
+}
+.grid div:is([category="Table"], [category="List"], [category="Chart"]) > section {
+    border-radius: 0.5rem;
+    /*box-shadow: rgba(17, 17, 17, 0.04) 0px 2px 4px 0px, rgba(33, 33, 33, 0.08) 0px 8px 32px 0px;*/
+    box-shadow: rgba(17, 17, 17, 0.04) 0px 2px 4px 0px, rgba(33, 33, 33, 0.08) 0px 8px 32px 0px;
+}
+div[id^="summary"] .additional-elements-wrapper {
+    padding: 1rem 1.5rem;
+}
+div[id^="summary"] .list-field-element {
+    width: inherit;
+}
+div[id^="summary"] .list-field-element p {
+    display: flex;
+    justify-content: space-between;
+}
+.summary-type-count {
+    align-self: flex-end;
+    line-height: 3rem;
+}
+.ag-row:not(:last-child) {
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+/* Remove empty div below subtitle/map and eliminate gap */
+:where(#table1) .css-gg4vpm, :where(#table1) .ag-header {
+    display: none !important;
+}
