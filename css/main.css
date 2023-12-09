@@ -49,11 +49,6 @@ a:hover {
 :not(:defined) {
   /*visibility: hidden;*/
 }
-html,
-body,
-.content[data-appid] {
-  background-color: var(--mara-background-lighter);
-}
 iframe {
   padding: 0 !important;
   margin: 0 !important;
