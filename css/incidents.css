@@ -13,6 +13,9 @@
   - Responsive styles are included for various screen sizes.
 */
 
+.col-12 {
+    padding-left: 0;
+}
 #main {
     padding: 0 !important;
 }
