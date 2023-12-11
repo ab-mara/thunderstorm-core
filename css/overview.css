@@ -11,6 +11,11 @@
   - Responsive styles are included for various screen sizes.
 */
 
+html,
+body,
+.content[data-appid] {
+  background-color: var(--mara-background-lighter);
+}
 .col-12 {
     padding-left: 0 !important;
 }
