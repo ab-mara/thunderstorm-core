@@ -42,3 +42,5 @@ For questions or issues, please contact the project maintainers:
 
 We would like to express our gratitude to the open-source community for their invaluable contributions.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2a783d23-5579-4a52-b1ac-1f3fab276051/deploy-status)](https://app.netlify.com/sites/thunderstorm-core/deploys)
+
