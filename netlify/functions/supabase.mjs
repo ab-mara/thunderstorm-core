@@ -20,7 +20,7 @@ export async function fetchDataFromSupabase(
         db: { schema: "airtable" },
       }
     );
-
+    console.log("supabaseClient in supabase.mjs:", supabaseClient);
     // Fetch data from Supabase
     const { data, error } = await supabaseClient
       .from("incidents")
