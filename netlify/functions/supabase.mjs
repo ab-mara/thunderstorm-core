@@ -5,6 +5,7 @@ export async function fetchDataFromSupabase(
   currentYear
 ) {
   // Use the passed variables as needed
+  console.log("Supabase URL in supabase.mjs:", process.env.SUPABASE_URL);
   console.log("Region Title Case in supabase.mjs:", regionTitleCase);
   console.log("Region Names in supabase.mjs:", regionNames);
   console.log("New Date in supabase.mjs:", newDate);
