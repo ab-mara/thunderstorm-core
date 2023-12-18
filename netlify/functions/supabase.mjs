@@ -26,17 +26,17 @@ export async function fetchDataFromSupabase(
       .from("incidents")
       .select(
         `
-                    publish,
-                    domain,
-                    alert_id, 
-                    position, 
-                    date, 
-                    description, 
-                    header, 
-                    details_url_absolute, 
-                    regions!inner(name), 
-                    alert_types!inner(name, color)
-                    `
+            publish,
+            domain,
+            alert_id, 
+            position, 
+            date, 
+            description, 
+            header, 
+            details_url_absolute, 
+            regions!inner(name), 
+            alert_types!inner(name, color)
+            `
       )
       .in(
         "regions.name",
