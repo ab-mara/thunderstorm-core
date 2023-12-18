@@ -13,9 +13,13 @@ export async function fetchDataFromSupabase(
   try {
     // Initialize Supabase client
     const { createClient } = supabase;
-    const supabaseClient = createClient(SUPABASE_URL, SUPABASE_API_KEY, {
-      db: { schema: "airtable" },
-    });
+    const supabaseClient = createClient(
+      process.env.SUPABASE_URL,
+      process.env.SUPABASE_API_KEY,
+      {
+        db: { schema: "airtable" },
+      }
+    );
 
     // Fetch data from Supabase
     const { data, error } = await supabaseClient
