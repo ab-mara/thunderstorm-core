@@ -59,6 +59,8 @@ export async function fetchDataFromSupabase(
           : new Date(`${currentYear}-12-31T23:59:59.999Z`).toISOString()
       );
 
+    console.log("Data in supabase.mjs:", data);
+
     if (error) {
       console.error("Supabase error", error);
       return null;
