@@ -1,3 +1,4 @@
 export default async (req, context) => {
-  return new Response("Hello, world!");
+  const apiKey = Netlify.env.get("SUPABASE_API_KEY");
+  return new Response("Hello, world! API Key is: " + apiKey);
 };
