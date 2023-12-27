@@ -1,6 +1,11 @@
 export default async (event) => {
-  const test =
-    event.queryStringParameters?.test ??
-    "This is a test. The query string parameter 'test' was not provided.";
-  return new Response(test);
+  try {
+    const test =
+      event.queryStringParameters?.test ??
+      "This is a test. The query string parameter 'test' was not provided.";
+    return new Response(test);
+  } catch (error) {
+    console.error("Error processing request:", error);
+    return new Response("Internal Server Error", { status: 500 });
+  }
 };
