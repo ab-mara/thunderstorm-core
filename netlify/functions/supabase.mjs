@@ -1,11 +1,13 @@
-export async function fetchDataFromSupabase(
+export default async function fetchDataFromSupabase(
   regionTitleCase,
   regionNames,
   newDate,
   currentYear
 ) {
+  const SUPABASE_API_KEY = Netlify.env.get("SUPABASE_API_KEY");
+  const SUPABASE_URL = Netlify.env.get("SUPABASE_URL");
   // Use the passed variables as needed
-  console.log("Supabase URL in supabase.mjs:", process.env.SUPABASE_URL);
+  console.log("Supabase URL in supabase.mjs:", SUPABASE_URL);
   console.log("Region Title Case in supabase.mjs:", regionTitleCase);
   console.log("Region Names in supabase.mjs:", regionNames);
   console.log("New Date in supabase.mjs:", newDate);
@@ -14,13 +16,9 @@ export async function fetchDataFromSupabase(
   try {
     // Initialize Supabase client
     const { createClient } = supabase;
-    const supabaseClient = createClient(
-      process.env.SUPABASE_URL,
-      process.env.SUPABASE_API_KEY,
-      {
-        db: { schema: "airtable" },
-      }
-    );
+    const supabaseClient = createClient(SUPABASE_URL, SUPABASE_API_KEY, {
+      db: { schema: "airtable" },
+    });
     console.log("supabaseClient in supabase.mjs:", supabaseClient);
     // Fetch data from Supabase
     const { data, error } = await supabaseClient

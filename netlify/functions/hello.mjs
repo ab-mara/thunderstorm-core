@@ -1,4 +1,6 @@
-export default async (req, context) => {
-  const apiKey = Netlify.env.get("SUPABASE_API_KEY");
-  return new Response("Hello, world!");
+export default async () => {
+  const test =
+    event.queryStringParameters?.test ??
+    "This is a test. The query string parameter 'test' was not provided.";
+  return new Response(test);
 };
