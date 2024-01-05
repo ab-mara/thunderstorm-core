@@ -4,6 +4,7 @@ export default async (event) => {
     let responseText = test
       ? `Received test parameter: ${test}`
       : "This is a test. The query string parameter 'test' was not provided.";
+    responseText = "foo";
     return new Response(responseText);
   } catch (error) {
     console.error("Error processing request:", error);
