@@ -1,7 +1,7 @@
 export default async (event) => {
   try {
     const test = event.queryStringParameters?.test;
-    const responseText = test
+    let responseText = test
       ? `Received test parameter: ${test}`
       : "This is a test. The query string parameter 'test' was not provided.";
     return new Response(responseText);
