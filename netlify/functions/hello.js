@@ -1,6 +1,6 @@
 exports.handler = async (event) => {
-  const SUPABASE_API_KEY = process.env.get("SUPABASE_API_KEY");
-  const SUPABASE_URL = process.env.get("SUPABASE_URL");
+  const SUPABASE_API_KEY = process.env.SUPABASE_API_KEY;
+  const SUPABASE_URL = process.env.SUPABASE_URL;
   const querystring = event.queryStringParameters;
   const test = querystring.test;
   let responseText = test
