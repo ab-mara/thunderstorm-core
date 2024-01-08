@@ -1,4 +1,4 @@
-export default async (event, context) => {
+exports.handler = async (event) => {
   const querystring = event.queryStringParameters;
 
   const boopee = querystring.boopee || "a friend";
