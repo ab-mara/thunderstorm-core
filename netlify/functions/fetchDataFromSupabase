@@ -1,0 +1,54 @@
+exports.handler = async (event) => {
+  const SUPABASE_API_KEY = process.env.SUPABASE_API_KEY;
+  const SUPABASE_URL = process.env.SUPABASE_URL;
+  const querystring = event.queryStringParameters;
+  const region = querystring.region;
+  const selectedItemYear = querystring.selectedItemYear;
+  const newDate = new Date(selectedItemYear).toISOString();
+  const currentYear = querystring.year;
+  const regionNames = ['West Africa', 'Indian Ocean', 'Southeast Asia', 'Europe', 'Americas', 'Asia Pacific'];
+
+  // Initialize Supabase client
+  const { createClient } = supabase;
+  const supabaseClient = createClient(SUPABASE_URL, SUPABASE_API_KEY, {
+      db: { schema: 'airtable' }
+  });
+
+  // Function to fetch data from Supabase
+  const { data, error } = await supabaseClient
+      .from('incidents')
+      .select(
+        `
+          publish,
+          domain,
+          alert_id, 
+          position, 
+          date, 
+          description, 
+          header, 
+          details_url_absolute, 
+          subheader,
+          regions!inner(name), 
+          alert_types!inner(name, color)
+          `
+      )
+      .in('regions.name', region === 'World' ? regionNames : [region])
+      .eq('publish', true)
+      .eq('domain', 'Maritime')
+      .gte('date', newDate !== null ? newDate : new Date(`${currentYear}-01-01T00:00:00.000Z`).toISOString())
+      .lte('date', newDate !== null ? new Date(`${selectedItemYear}-12-31T23:59:59.999Z`).toISOString() : new Date(`${currentYear}-12-31T23:59:59.999Z`).toISOString());
+
+  if (error) {
+      console.error('Supabase error', error);
+      return;
+  }
+
+  console.log('Supabase data', data);
+  
+
+
+  return {
+    statusCode: 200,
+    body: data,
+  };
+};

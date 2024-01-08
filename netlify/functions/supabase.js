@@ -1,4 +1,4 @@
-exports.handler = async function fetchDataFromSupabase(
+export default async function fetchDataFromSupabase(
   regionTitleCase,
   regionNames,
   newDate,
@@ -59,7 +59,7 @@ exports.handler = async function fetchDataFromSupabase(
           : new Date(`${currentYear}-12-31T23:59:59.999Z`).toISOString()
       );
 
-    console.log("Data in supabase.js:", data);
+    console.log("Data in supabase.mjs:", data);
 
     if (error) {
       console.error("Supabase error", error);
@@ -71,4 +71,4 @@ exports.handler = async function fetchDataFromSupabase(
     console.error("Error fetching data:", error);
     return null;
   }
-};
+}
