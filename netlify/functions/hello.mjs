@@ -1,4 +1,4 @@
-export default async (event) => {
+exports.handler = async (event) => {
   try {
     const test = event.queryStringParameters?.test;
     let responseText = test
