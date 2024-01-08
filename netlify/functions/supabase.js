@@ -1,11 +1,11 @@
-export default async function fetchDataFromSupabase(
+exports.handler = async function fetchDataFromSupabase(
   regionTitleCase,
   regionNames,
   newDate,
   currentYear
 ) {
-  const SUPABASE_API_KEY = Netlify.env.get("SUPABASE_API_KEY");
-  const SUPABASE_URL = Netlify.env.get("SUPABASE_URL");
+  const SUPABASE_API_KEY = process.env.SUPABASE_API_KEY;
+  const SUPABASE_URL = process.env.SUPABASE_URL;
   // Use the passed variables as needed
   console.log("Supabase URL in supabase.mjs:", SUPABASE_URL);
   console.log("Region Title Case in supabase.mjs:", regionTitleCase);
@@ -59,7 +59,7 @@ export default async function fetchDataFromSupabase(
           : new Date(`${currentYear}-12-31T23:59:59.999Z`).toISOString()
       );
 
-    console.log("Data in supabase.mjs:", data);
+    console.log("Data in supabase.js:", data);
 
     if (error) {
       console.error("Supabase error", error);
@@ -71,4 +71,4 @@ export default async function fetchDataFromSupabase(
     console.error("Error fetching data:", error);
     return null;
   }
-}
+};
